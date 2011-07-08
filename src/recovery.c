@@ -159,7 +159,7 @@ int recovery_enter_restore(struct idevicerestore_client_t* client, plist_t build
 	if (recovery_send_ibec(client, build_identity) < 0) {
 		error("ERROR: Unable to send iBEC\n");
 		return -1;
-	}
+	}it
 
 	/* this must be long enough to allow the device to run the iBEC */
 	/* FIXME: Probably better to detect if the device is back then */
