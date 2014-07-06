@@ -155,7 +155,8 @@ plist_t tss_send_request(plist_t tss_request) {
 	if (handle != NULL) {
 		struct curl_slist* header = NULL;
 		header = curl_slist_append(header, "Content-type: text/xml");
-
+        	header = curl_slist_append(header, "Expect:");
+        
 		response = malloc(sizeof(tss_response));
 		if (response == NULL) {
 			fprintf(stderr, "Unable to allocate sufficent memory\n");
